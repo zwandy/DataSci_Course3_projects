@@ -12,6 +12,7 @@ CONDITIONS
 ----------
   1. This script and the unzipped collection of data files (link to zip below) must reside in the same working directory when using this script
   2. Do not move or rename any of the data files or folders
+  3. NOTE! this script may take up to 1 minute to finish processing the data set!
 
 
 DATA

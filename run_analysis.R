@@ -1,5 +1,7 @@
 run_analysis <- function(){
   
+  library(dplyr)
+  
   ##STEP 1: combine all test and training files into one data frame
   ##Test files
   test_subs <- read.table("UCI Har Dataset/test/subject_test.txt")
@@ -70,8 +72,12 @@ actNames <- function(dataset){
   data.subjAct <- rename(data.subjAct, actnum=activity)
   data.subjAct <- mutate(data.subjAct, activity=factor(actnum, labels=c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING")))
   data.subjAct$actnum <- NULL
+  
   mergeData <- cbind(data.subjAct, data.features)
+  
+  mergeData
 }
+
 
 genFile <- function(dataset){
     ##initializing a data frame with the correct number and name of cols
